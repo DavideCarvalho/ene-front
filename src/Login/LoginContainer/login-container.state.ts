@@ -1,5 +1,5 @@
 import {handleActions} from 'redux-actions';
-import {CHANGE_EMAIL_VALUE, CHANGE_PASSWORD_VALUE} from "./login.constants";
+import {CHANGE_EMAIL_VALUE, CHANGE_PASSWORD_VALUE} from "./login-container.constants";
 
 export interface ILoginState {
   email: string,

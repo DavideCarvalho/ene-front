@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga'
 import {Provider} from 'react-redux';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './index.css';
 import 'skeleton-css/css/normalize.css'
 import 'skeleton-css/css/skeleton.css'
-import App from './App';
 import reducers from './reducers';
 import sagas from './sagas';
 import * as serviceWorker from './serviceWorker';
+import {Login} from "./Login";
 
 const sagaMiddleware = createSagaMiddleware();
 const Store = createStore(
@@ -21,7 +22,11 @@ sagaMiddleware.run(sagas);
 
 ReactDOM.render(
   <Provider store={Store}>
-    <App/>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Login}/>
+      </Switch>
+    </Router>
   </Provider>
   , document.getElementById('root'));
 

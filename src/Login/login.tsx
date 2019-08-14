@@ -1,9 +1,9 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
-import LoginContainer from "./Login/LoginContainer/login-container";
+import './login.css';
+import LoginContainer from './LoginContainer/login-container';
 
-const App: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <div className="App">
       <LoginContainer />
@@ -11,4 +11,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Login;
